@@ -1,0 +1,38 @@
+
+main{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+.option{
+    background-color: #00000052;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    width: 40vw;
+    height: 70vh;
+    border-radius: 15px;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+
+.option:hover{
+    width: 45vw;
+    height: 80vh;   
+}
+#add{
+    margin-bottom: 1.6vw;
+}
+
+.option img{
+    filter: invert(100%);
+    width: 15vw;
+}
+a{
+    text-decoration: none;
+}

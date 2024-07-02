@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    transition: all 0.5s;
+}
+.btn:hover{
+    width: 13vw;
+    height: 10vh;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://images.hdqwalls.com/download/minimalist-mountains-night-4k-zy-3840x2160.jpg");
+    background-size: cover;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+header{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vw;
+    color: #e4b076;
+    backdrop-filter: blur(5px);
+    background-color: #00000052;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Saver</title>
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.sxoNwzzuKUrG-HfXFA3hRwHaE8?w=191&h=185&c=7&r=0&o=5&pid=1.7" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Image Saver</h1>
+    </header>
+    <main>
+        <fieldset>
+            <legend>CADASTRO</legend>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="btns">
+                    <input class="btn" type="submit" value="Cadastrar-se">
+                </div>
+            </form>
+        </fieldset>
+    </main>
+</body>
+</html>

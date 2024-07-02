@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Saver</title>
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.sxoNwzzuKUrG-HfXFA3hRwHaE8?w=191&h=185&c=7&r=0&o=5&pid=1.7" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Image Saver</h1>
+    </header>
+    <main>
+        <a href="{% url 'new_image' %}">
+            <div class="option"><img id="add" src="https://th.bing.com/th/id/R.cc368bb673929b595c10395da8f632f6?rik=NlAGGJLChs2Aog&pid=ImgRaw&r=0"><p>Adicionar Imagem</p></div>
+        </a>
+        <a href="{% url 'all' %}">
+            <div class="option"><img id="gallery" src="https://th.bing.com/th/id/R.e40af2d69b9231ad52080a0d135431d4?rik=0tERiRINZHPp2Q&pid=ImgRaw&r=0"><p>Gallery</p></div>
+        </a>
+    </main>
+</body>
+</html>

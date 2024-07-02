@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Saver</title>
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.sxoNwzzuKUrG-HfXFA3hRwHaE8?w=191&h=185&c=7&r=0&o=5&pid=1.7" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+</head>
+<body>
+    <div class="full">
+        <div class="image-full">
+        </div>
+    </div>
+    <header>
+        <a href="{% url 'home' %}"><img src="https://th.bing.com/th/id/R.86ec284457bfc38a50305e5cfd748610?rik=vQ3qz3%2fwc77vyQ&pid=ImgRaw&r=0"></a>
+        <h1>Image Saver</h1>
+    </header>
+    <main>
+        <div class="view">
+            {% if images %}
+            {% for image in images %}
+            <div class="image">
+                <img src="{{ image.image.url }}">
+                <p class="legend">{{ image.legend }}</p>
+                <p class="date">Upload em {{ image.date }}</p>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p style="
+            color: #fff; 
+            margin: 20px;" >Você não enviou nenhuma imagem ainda.</p>
+            {% endif %}
+        </div>
+    </main>
+    <script src="{% static 'javascript/all.js' %}"></script>
+</body>
+</html>

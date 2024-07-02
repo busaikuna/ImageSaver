@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Saver</title>
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.sxoNwzzuKUrG-HfXFA3hRwHaE8?w=191&h=185&c=7&r=0&o=5&pid=1.7" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/newImage.css' %}">
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'home' %}"><img src="https://th.bing.com/th/id/R.86ec284457bfc38a50305e5cfd748610?rik=vQ3qz3%2fwc77vyQ&pid=ImgRaw&r=0"></a>
+        <h1>Image Saver</h1>
+    </header>
+    <main>
+        <fieldset>
+            <legend>ADICIONAR IMAGEM</legend>
+            <form enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input class="btn" type="submit" value="Adicionar">
+            </form>
+        </fieldset>
+    </main>
+</body>
+
+</html>
