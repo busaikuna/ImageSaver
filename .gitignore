@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django
+*.log
+*.sqlite3
+db.sqlite3
+/media
+/staticfiles
+
+# Ambiente virtual
+venv/
+is_venv/
+.env
+.venv/
+
+# Configurações de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Arquivos de cache
+*.pyc
+*.pyd
+*.pdb
+
+# Outros arquivos
+*.DS_Store
+*.env
+*.local
