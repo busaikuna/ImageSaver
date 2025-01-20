@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-a_!gx6y_s+@$fwth(ordgr2$^!$ygov63+@ea$xj#dhmw1g&11
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['imagesaver-zo4l.onrender.com']
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
