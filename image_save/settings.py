@@ -15,6 +15,11 @@ DEBUG = True
 # Allow the Render domain dynamically using an environment variable
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '*').split(',')
 
+# Add trusted origins for CSRF validation
+CSRF_TRUSTED_ORIGINS = [
+    'https://imagesaver-zo4l.onrender.com',  # Substitua pelo domínio correto gerado pela Render
+]
+
 # Port configuration for Render
 PORT = os.getenv('PORT', '8000')
 
