@@ -1,11 +1,8 @@
-
 from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -15,7 +12,11 @@ SECRET_KEY = 'django-insecure-a_!gx6y_s+@$fwth(ordgr2$^!$ygov63+@ea$xj#dhmw1g&11
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['imagesaver-zo4l.onrender.com']
+# Allow the Render domain dynamically using an environment variable
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '*').split(',')
+
+# Port configuration for Render
+PORT = os.getenv('PORT', '8000')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
